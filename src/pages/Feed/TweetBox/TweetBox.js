@@ -20,7 +20,7 @@ const TweetBox = () => {
     const [user] = useAuthState(auth)
     const email = user?.email;
 
-    const userProfilePic = loggedInUser[0]?.profileImage?loggedInUser[0]?.profileImage:"https://api.imgbb.com/1/upload?key=6f902511a781fc19e6f532fc69739a85"
+    const suserProfilePic = loggedInUser[0]?.profileImage?loggedInUser[0]?.profileImage:"https://api.imgbb.com/1/upload?key=6f902511a781fc19e6f532fc69739a85"
 
     const handleUploadImage = (e) => {
         setIsLoading(true);
@@ -44,7 +44,7 @@ const TweetBox = () => {
     const handleTweet = (e) => {
         e.preventDefault();
         if(user.providerData[0].providerId ==='password'){
-            fetch(`https://twitterback-uuwq.onrender.com/loggedInUser?email=${email}`)
+            fetch(`http://localhost:5000/loggedInUser?email=${email}`)
             .then(res => res.json())
             .then(data => {
                 setName(data[0]?.name)
@@ -67,7 +67,7 @@ const TweetBox = () => {
         // console.log(userPost);
         setPost(' ');
         setImageURL(' ');
-        fetch(`https://twitterback-uuwq.onrender.com/post`, {
+        fetch(`http://localhost:5000/post`, {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

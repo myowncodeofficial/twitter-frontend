@@ -48,7 +48,7 @@ const Signup = () => {
             email:email,
         }
 
-        axios.post(`https://twitterback-uuwq.onrender.com/register`, user)
+        axios.post(`http://localhost:5000/register`, user)
     }  
 
     const handleGoogleSignIn = () => {
