@@ -20,7 +20,7 @@ const TweetBox = () => {
     const [user] = useAuthState(auth)
     const email = user?.email;
 
-    const suserProfilePic = loggedInUser[0]?.profileImage?loggedInUser[0]?.profileImage:"https://api.imgbb.com/1/upload?key=6f902511a781fc19e6f532fc69739a85"
+    const userProfilePic = loggedInUser[0]?.profileImage?loggedInUser[0]?.profileImage:"https://api.imgbb.com/1/upload?key=6f902511a781fc19e6f532fc69739a85"
 
     const handleUploadImage = (e) => {
         setIsLoading(true);
