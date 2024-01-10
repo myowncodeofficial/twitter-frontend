@@ -76,7 +76,7 @@ import axios from 'axios';
 //       dob,
 //     }
 //     if (editedInfo){
-//       await axios.patch(`https://twitterbackend-xen3.onrender.com/userUpdates/${user?.email}`, editedInfo)
+//       await axios.patch(`https://twitterfullapplicationbackend.onrender.com/userUpdates/${user?.email}`, editedInfo)
 //     }
 //     setOpen(false)
 //   }
@@ -216,7 +216,7 @@ export default function EditProfile({ user, loggedInUser }) {
       dob,
     }
     if (editedInfo){
-      await axios.patch(`https://twitterbackend-xen3.onrender.com/userUpdates/${user?.email}`, editedInfo)
+      await axios.patch(`https://twitterfullapplicationbackend.onrender.com/userUpdates/${user?.email}`, editedInfo)
     }
     setOpen(false)
   }

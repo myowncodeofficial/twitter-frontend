@@ -8,7 +8,7 @@ const useLoggedInUser = () => {
     const [loggedInUser, setLoggedInUser] = useState({});
 
     useEffect(() => {
-        fetch(`https://twitterbackend-xen3.onrender.com/loggedInUser?email=${email}`)
+        fetch(`https://twitterfullapplicationbackend.onrender.com/loggedInUser?email=${email}`)
         .then(res => res.json())
         .then(data => {
             setLoggedInUser(data)
