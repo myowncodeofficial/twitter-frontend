@@ -7,7 +7,7 @@ const Feed = () => {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        fetch('https://twitterback-uuwq.onrender.com/post')
+        fetch('https://twitterbackend-xen3.onrender.com/post')
         .then(res => res.json())
         .then(data => {
             setPosts(data)

@@ -44,7 +44,7 @@ const TweetBox = () => {
     const handleTweet = (e) => {
         e.preventDefault();
         if(user.providerData[0].providerId ==='password'){
-            fetch(`https://twitterback-uuwq.onrender.com/loggedInUser?email=${email}`)
+            fetch(`https://twitterbackend-xen3.onrender.com/loggedInUser?email=${email}`)
             .then(res => res.json())
             .then(data => {
                 setName(data[0]?.name)
@@ -67,7 +67,7 @@ const TweetBox = () => {
         // console.log(userPost);
         setPost(' ');
         setImageURL(' ');
-        fetch(`https://twitterback-uuwq.onrender.com/post`, {
+        fetch(`https://twitterbackend-xen3.onrender.com/post`, {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

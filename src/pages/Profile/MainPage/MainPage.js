@@ -21,7 +21,7 @@ const MainPage = ({ user }) => {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        fetch(`https://twitterback-uuwq.onrender.com/userPost?email=${user?.email}`)
+        fetch(`https://twitterbackend-xen3.onrender.com/userPost?email=${user?.email}`)
         .then(res => res.json())
         .then(data => {
             setPosts(data)
@@ -45,7 +45,7 @@ const MainPage = ({ user }) => {
                     }
                     setIsLoading(false);
                     if (url) {
-                        axios.patch(`https://twitterback-uuwq.onrender.com/userUpdates/${user?.email}`, userCoverImage)
+                        axios.patch(`https://twitterbackend-xen3.onrender.com/userUpdates/${user?.email}`, userCoverImage)
                     }
                 })
     }
@@ -65,7 +65,7 @@ const MainPage = ({ user }) => {
                     }
                     setIsLoading(false);
                     if (url) {
-                        axios.patch(`https://twitterback-uuwq.onrender.com/userUpdates/${user?.email}`, userProfileImage)
+                        axios.patch(`https://twitterbackend-xen3.onrender.com/userUpdates/${user?.email}`, userProfileImage)
                     }
                 })
     }
